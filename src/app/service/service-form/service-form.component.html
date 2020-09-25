@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <service-user fgName="me"></service-user>
+  <service-user fgName="friend"></service-user>
+</form>
+
+value: {{ form.value | json }} <br>
+valid: {{ form.valid }} <br>
+touched: {{ form.touched }} <br>
+
+form {{ form.errors | json }} <br>
+form.me {{ form.get('me').errors | json }} <br>
+form.friend {{ form.get('friend').errors | json }} <br>
