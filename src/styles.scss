@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.outline {
+  margin: .5rem;
+  padding: .5rem;
+  outline: 1px solid #eee;
+}
+
+fieldset {
+  border: none;
+}

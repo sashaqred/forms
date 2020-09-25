@@ -1,12 +1,22 @@
 <form [formGroup]="form">
-  <service-user fgName="me"></service-user>
-  <service-user fgName="friend"></service-user>
+  <div class="outline">
+    <service-user fgName="me"></service-user>
+    <control-info [ac]="form.get('me')"></control-info>
+    <div class="inline">
+      <control-info [ac]="form.get('me.name')"></control-info>
+      <control-info [ac]="form.get('me.nickname')"></control-info>
+      <control-info [ac]="form.get('me.surname')"></control-info>
+    </div>
+  </div>
+  <div class="outline">
+    <service-user fgName="friend"></service-user>
+    <control-info [ac]="form.get('friend')"></control-info>
+    <div class="inline">
+      <control-info [ac]="form.get('friend.name')"></control-info>
+      <control-info [ac]="form.get('friend.nickname')"></control-info>
+      <control-info [ac]="form.get('friend.surname')"></control-info>
+    </div>
+  </div>
 </form>
 
-value: {{ form.value | json }} <br>
-valid: {{ form.valid }} <br>
-touched: {{ form.touched }} <br>
-
-form {{ form.errors | json }} <br>
-form.me {{ form.get('me').errors | json }} <br>
-form.friend {{ form.get('friend').errors | json }} <br>
+<control-info [ac]="form"></control-info>

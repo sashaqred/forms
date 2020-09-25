@@ -1,23 +1,25 @@
 <fieldset [formGroup]="user">
-  <label>
-    name
-    <input formControlName="name">
-  </label>
-  <label>
-    nickname
-    <input formControlName="nickname">
-  </label>
-  <label>
-    surname
-    <input formControlName="surname">
-  </label>
-  <br>
-  value: {{ user.value | json }} <br>
-  valid: {{ user.valid }} <br>
-  touched: {{ user.touched }} <br>
-
-  user.name {{ user.get('name').errors | json }} <br>
-  user.nickname {{ user.get('nickname').errors | json }} <br>
-  user.surname {{ user.get('surname').errors | json }} <br>
-
+  <div class="inline">
+    <div class="outline">
+      <label>
+        name
+        <input formControlName="name">
+      </label>
+      <control-info [ac]="user.get('name')"></control-info>
+    </div>
+    <div class="outline">
+      <label>
+        nickname
+        <input formControlName="nickname">
+      </label>
+      <control-info [ac]="user.get('nickname')"></control-info>
+    </div>
+    <div class="outline">
+      <label>
+        surname
+        <input formControlName="surname">
+      </label>
+      <control-info [ac]="user.get('surname')"></control-info>
+    </div>
+  </div>
 </fieldset>
