@@ -1,0 +1,16 @@
+<fieldset [fgName]="userName" [formGroup]="user">
+  <label>
+    name
+    <input fcName="name" [formControl]="name">
+  </label>
+  <label>
+    nickname
+    <input fcName="nickname" [formControl]="nickname">
+  </label>
+  <label>
+    surname
+    <input fcName="surname" [formControl]="surname">
+  </label>
+</fieldset>
+
+{{ user.value | json }}

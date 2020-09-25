@@ -1,0 +1,6 @@
+<form [formGroup]="form" fgName>
+  <directive-user userName="me"></directive-user>
+  <directive-user userName="friend"></directive-user>
+</form>
+
+form {{ form.value | json }}
