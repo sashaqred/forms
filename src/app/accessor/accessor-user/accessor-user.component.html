@@ -1,0 +1,23 @@
+<fieldset [formGroup]="user">
+  <label>
+    name
+    <input formControlName="name">
+  </label>
+  <label>
+    nickname
+    <input formControlName="nickname">
+  </label>
+  <label>
+    surname
+    <input formControlName="surname">
+  </label>
+  <br>
+  value: {{ user.value | json }} <br>
+  valid: {{ user.valid }} <br>
+  touched: {{ user.touched }} <br>
+
+  user.name {{ user.get('name').errors | json }} <br>
+  user.nickname {{ user.get('nickname').errors | json }} <br>
+  user.surname {{ user.get('surname').errors | json }} <br>
+
+</fieldset>
