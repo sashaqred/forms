@@ -1,0 +1,25 @@
+<fieldset [formGroup]="user">
+  <div class="inline">
+    <div class="outline">
+      <label>
+        name
+        <input formControlName="name">
+      </label>
+      <control-info [ac]="user.get('name')"></control-info>
+    </div>
+    <div class="outline">
+      <label>
+        nickname
+        <input formControlName="nickname">
+      </label>
+      <control-info [ac]="user.get('nickname')"></control-info>
+    </div>
+    <div class="outline">
+      <label>
+        surname
+        <input formControlName="surname">
+      </label>
+      <control-info [ac]="user.get('surname')"></control-info>
+    </div>
+  </div>
+</fieldset>

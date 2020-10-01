@@ -6,6 +6,8 @@ import { ServiceFormComponent } from './service/service-form/service-form.compon
 import { ServiceModule } from './service/service.module';
 import { DirectiveFormComponent } from './directive/directive-form/directive-form.component';
 import { DirectiveModule } from './directive/directive.module';
+import { RegisterModule } from './register/register.module';
+import { RegisterFormComponent } from './register/register-form/register-form.component';
 
 const routes: Routes = [
   {
@@ -25,10 +27,14 @@ const routes: Routes = [
     path: 'directive',
     component: DirectiveFormComponent,
   },
+  {
+    path: 'register',
+    component: RegisterFormComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule, AccessorModule, ServiceModule, DirectiveModule]
+  exports: [RouterModule, AccessorModule, ServiceModule, DirectiveModule, RegisterModule]
 })
 export class AppRoutingModule { }

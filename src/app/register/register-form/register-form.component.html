@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+  <div class="outline">
+    <register-user fgName="me"></register-user>
+    <control-info [ac]="form.get('me')"></control-info>
+    <div class="inline">
+      <control-info [ac]="form.get('me.name')"></control-info>
+      <control-info [ac]="form.get('me.nickname')"></control-info>
+      <control-info [ac]="form.get('me.surname')"></control-info>
+    </div>
+  </div>
+  <div class="outline">
+    <register-user fgName="friend"></register-user>
+    <control-info [ac]="form.get('friend')"></control-info>
+    <div class="inline">
+      <control-info [ac]="form.get('friend.name')"></control-info>
+      <control-info [ac]="form.get('friend.nickname')"></control-info>
+      <control-info [ac]="form.get('friend.surname')"></control-info>
+    </div>
+  </div>
+</form>
+
+<control-info [ac]="form"></control-info>
